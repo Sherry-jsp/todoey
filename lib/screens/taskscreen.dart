@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class TasksScreen extends StatelessWidget {
   const TasksScreen({super.key});
 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,10 +60,34 @@ class TasksScreen extends StatelessWidget {
                   topRight: Radius.circular(20.0),
                 ),
               ),
+              child: TaskList(),
             ),
           ),
         ],
       ),
+    );
+  }
+}
+
+class TaskList extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      padding: const EdgeInsets.symmetric(vertical: 30.0, horizontal: 30.0),
+      children: [
+        TaskTile(),
+        TaskTile()
+      ],
+    );
+  }
+}
+
+class TaskTile extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      title: Text('This is your task'),
+      trailing: Checkbox(value: false, onChanged: null),
     );
   }
 }
