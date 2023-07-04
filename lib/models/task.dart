@@ -1,8 +1,8 @@
 class Task {
-  final String? name;
-  late final bool isDone;
+  final String name;
+  bool isDone;
 
-  Task({this.name, this.isDone = false});
+  Task({required this.name,this.isDone = false});
 
   void toggleDone(){
     isDone = !isDone;
