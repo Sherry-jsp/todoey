@@ -3,18 +3,14 @@ import 'taskTile.dart';
 import 'package:todoey_app/models/task.dart';
 
 class TaskList extends StatefulWidget {
-  const TaskList({super.key});
+  final List<Task> task;
+  TaskList(this.task);
 
   @override
   State<TaskList> createState() => _TaskListState();
 }
 
 class _TaskListState extends State<TaskList> {
-  List<Task> task = [
-    Task(name: 'Buy Milk'),
-    Task(name: 'Buy eggs'),
-    Task(name: 'Buy bread'),
-  ];
 
   @override
   Widget build(BuildContext context) {
@@ -22,18 +18,18 @@ class _TaskListState extends State<TaskList> {
       padding: const EdgeInsets.symmetric(vertical: 30.0),
       itemBuilder: (context, index) {
         return TaskTile(
-            isChecked: task[index].isDone,
-            taskTitle: task[index].name,
+            isChecked: widget.task[index].isDone,
+            taskTitle: widget.task[index].name,
             checkboxCallback: (checkboxState) {
               if (checkboxState != null) {
                 setState(() {
-                    task[index].isDone = checkboxState;
+                    widget.task[index].isDone = checkboxState;
                   },
                 );
               }
             });
       },
-      itemCount: task.length,
+      itemCount: widget.task.length,
     );
   }
 }
