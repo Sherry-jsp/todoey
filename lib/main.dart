@@ -3,16 +3,15 @@ import 'package:todoey_app/models/taskData.dart';
 import 'package:todoey_app/screens/taskscreen.dart';
 import 'package:provider/provider.dart';
 
-void main() => runApp(const MyApp());
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
       create: (context) => TaskData(),
-      child: const MaterialApp(
+      child: MaterialApp(
         home: TasksScreen(),
       ),
     );

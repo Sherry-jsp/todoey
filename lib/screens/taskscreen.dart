@@ -5,7 +5,6 @@ import 'package:todoey_app/widgets/taskList.dart';
 import 'package:provider/provider.dart';
 
 class TasksScreen extends StatelessWidget {
-  const TasksScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -82,7 +81,7 @@ class TasksScreen extends StatelessWidget {
                   topRight: Radius.circular(20.0),
                 ),
               ),
-              child: const TaskList(),
+              child: TaskList(),
             ),
           ),
         ],
