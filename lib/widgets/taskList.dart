@@ -4,6 +4,8 @@ import 'package:provider/provider.dart';
 import 'package:todoey_app/models/taskData.dart';
 
 class TaskList extends StatelessWidget {
+  const TaskList({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Consumer<TaskData>(
@@ -12,8 +14,8 @@ class TaskList extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 30.0),
           itemBuilder: (context, index) {
             return TaskTile(
-              isChecked: taskData.task[index].isDone,
-              taskTitle: taskData.task[index].name,
+              isChecked: taskData.tasks[index].isDone,
+              taskTitle: taskData.tasks[index].name,
               checkboxCallback: (checkboxState) {
                 // if (checkboxState != null) {
                 //   // setState(() {
