@@ -20,7 +20,7 @@ class TaskData extends ChangeNotifier{
 
   void addTask(String newTaskTitle){
     //if there are any changes in the list it will notfiy all listening widgets
-    final task = Task(name: newTaskTitle);
+    final task = Task(name: newTaskTitle, isDone:false);
     _tasks.add(task);
     notifyListeners();
   }

@@ -21,7 +21,6 @@ class TasksScreen extends StatelessWidget {
               ),
             ),
             backgroundColor: Colors.white,
-            clipBehavior: Clip.antiAliasWithSaveLayer,
             builder: (context) => SingleChildScrollView(
               child: Container(
                 padding: EdgeInsets.only(
