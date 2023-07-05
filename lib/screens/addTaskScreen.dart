@@ -4,6 +4,8 @@ import 'package:todoey_app/models/taskData.dart';
 
 class AddTaskScreen extends StatelessWidget {
   late String newTaskTitle;
+  AddTaskScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Padding(
