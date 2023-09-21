@@ -1,10 +1,16 @@
-# todoey_app
+# todoey
+A flutter App that tracks your to do's
 
-A new Flutter project.
+## Description
 
-## Getting Started
+This project is from a bootcamp for a Flutter application.
+- uses packages provider
 
-This project is a starting point for a Flutter application.
+## Sample Look
+![Screenshot 2023-09-21 181134](https://github.com/Sherry-jsp/todoey/assets/111681310/d68890a3-29c9-4f9a-9d0b-7f997bc7ffc3)
+![Screenshot 2023-09-21 181106](https://github.com/Sherry-jsp/todoey/assets/111681310/f093ea28-ad96-4ed1-8ddb-ff7c501de701)
+
+
 
 A few resources to get you started if this is your first Flutter project:
 
